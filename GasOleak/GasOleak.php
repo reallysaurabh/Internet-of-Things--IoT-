@@ -17,13 +17,14 @@ if (isset($_GET["w1"])){
 		mysql_query("INSERT INTO `gas` (`value`,`message`) VALUES ($val,'$remark1')");
 	}
 
-	sleep(60);
+	sleep(10);
 	header('Location: http://10.36.2.234');
 
 }
 else{
+	echo "hello";
 	$remark4="Error in the device. Contact the Admin";
-	mysql_query("INSERT INTO `gas` (`value`,`message`) VALUES ($val,'$remark4')");
+	mysql_query("INSERT INTO `gas` (`value`,`message`) VALUES (0,'$remark4')");
 }
 
 
